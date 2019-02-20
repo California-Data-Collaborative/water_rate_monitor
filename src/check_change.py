@@ -2,16 +2,7 @@
 # -*- coding: utf-8 -*-
 from webspider import *
 from filescan import *
-import requests
-import re
-from lxml import html
-from bs4 import BeautifulSoup
-import os
-import json
-import os.path
-import xlwt
-import xlrd
-from xlutils.copy import copy
+
 workbook = xlrd.open_workbook("utilities_for_OWRS.xlsx")
 urls = []
 sheet = workbook.sheet_by_name("utilities_for_OWRS.csv")
