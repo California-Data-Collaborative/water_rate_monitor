@@ -10,6 +10,8 @@ import os.path
 import xlwt
 import xlrd
 from xlutils.copy import copy
+
+# read information from stored excel files
 def check(utility_id, url):
     tests = []
     #if os.path.isfile(url.split("www.")[1].split("/")[0] + ".xls"):

@@ -12,13 +12,14 @@ import xlrd
 from pathlib import Path
 from xlutils.copy import copy
 
-    
+# write to excel    
 def excel_write(items, index, ws):
     for item in items:
         for i in range(0, len(item)):
             ws.write(index, i, item[i])
         index += 1
 
+# get head and items from table
 def get_item(utility_id, url):
     res = requests.get(url)
     soup = BeautifulSoup(res.text, 'lxml')
@@ -58,6 +59,7 @@ def get_item(utility_id, url):
     return heads, items
 
 
+# crawl information from website, if there is tables, store to excel files
 def webspider(utility_id, url):
     try:
         res = requests.get(url)
